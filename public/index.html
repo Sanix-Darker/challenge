@@ -12,33 +12,38 @@
       <div class="container">
          <h2>JoliMoi-Challenge</h2>
          <div >
-            <div class="form-group">
-               <label for="email">Number:</label>
-               <input type="number"
-                        class="form-control"
-                        value="10"
-                        id="num" placeholder="Enter your number here">
+            <div class="form-group col-md-12">
+               <div class="col-md-7">
+                    <label for="num">Number:</label>
+                    <input type="number"
+                            class="form-control"
+                            value="10"
+                            id="num" placeholder="Enter your number here">
+               </div>
+               <div class="col-md-5">
+                   <br>
+                    <button class="btn btn-default" onclick="sendNumber()">SEND NUMBER</button>
+               </div>
             </div>
 
-            <div class="form-group">
-               <label for="rom">Roman value: <b id="result" style="font-size: 25px">---</b></label>
+            <div class="form-group col-md-12">
+                <div class="col-md-12">
+                    <label for="rom">Roman value:</label>
+                    <b id="result" style="font-size: 25px">---</b>
+                </div>
             </div>
         </div>
       </div>
    </body>
    <script>
-       const num = $("#num").val();
-
-        setInterval(() => {
-            fetch(`/number?num=${num}`)
-                .then(data => {
-                    console.log("Sent: ", num);
-                });
-        }, 500);
-
-        var source = new EventSource(`/event`);
-        source.onmessage = (event) => {
+        var source = new EventSource("/event");
+        source.onmessage = function(event){
             document.getElementById("result").innerHTML = event.data;
         };
+        const sendNumber = () => {
+            let num = document.getElementById("num").value;
+            fetch(`/number?num=${num}`)
+                .then(data => {});
+        }
    </script>
 </html>

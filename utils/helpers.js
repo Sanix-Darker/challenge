@@ -1,6 +1,3 @@
-import logger from '../utils/logger';
-import fs from 'fs'
-
 /**
  * converter
  * This method take an input number and return it' value in
@@ -29,25 +26,7 @@ const converter = (num) => {
     return Array(+digits.join("") + 1).join("M") + roman;
 }
 
-
-
-/**
- *
- * @param {*} req
- * @param {*} res
- */
-export const sendSSE = (req, res) => {
-    res.writeHead(200, {
-        'Content-Type': 'text/event-stream',
-        'Cache-Control': 'no-cache',
-        'Connection': 'keep-alive'
-    });
-
-    setInterval(function() {
-        const num = fs.readFileSync('./public/tmp', {
-            encoding:'utf8',
-            flag:'r'
-        });
-        res.write(converter(num));
-    }, 1000);
+exports._test = {
+    converter: converter
 }
+

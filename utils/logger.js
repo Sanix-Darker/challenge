@@ -1,3 +1,8 @@
+/**
+ * Here we have our logger
+ * For everything hapening in our application
+ */
+
 require('dotenv').config();
 
 import path from 'path';

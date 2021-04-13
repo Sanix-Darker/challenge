@@ -9,7 +9,7 @@ const routes = (router) => {
 
     // The route for convertion
     router.get(`${prefix}`, (req, res) => {
-        res.sendFile('public/index.html');
+        res.render('public/index.html');
     });
 };
 
