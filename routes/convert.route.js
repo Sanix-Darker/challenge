@@ -1,12 +1,16 @@
 import controller from '../controllers/convert.controller';
 
-const routes = (router) => {
-    const prefix = `${process.env.API_BASE}convert`;
+const routes = (router, raw) => {
 
     // The route for convertion
-    router.get(`${prefix}`, (req, res) => {
-        controller.getNumber(req, res);
+    router.get(`/event`, (req, res) => {
+        controller.convertNumber(req, res, );
     });
+
+    router.get(`/number`, (req, res) => {
+        controller.saveNumber(req, res, );
+    });
+
 };
 
 export default routes;

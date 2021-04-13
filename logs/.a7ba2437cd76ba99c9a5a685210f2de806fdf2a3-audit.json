@@ -1,0 +1,14 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 25
+    },
+    "auditLog": "/home/d4rk3r/ACTUALC/vagrant/PYTHON/jolimoi/challenge/logs/.a7ba2437cd76ba99c9a5a685210f2de806fdf2a3-audit.json",
+    "files": [
+        {
+            "date": 1618322161975,
+            "name": "/home/d4rk3r/ACTUALC/vagrant/PYTHON/jolimoi/challenge/logs/app.log.2021-04-13",
+            "hash": "6644669ec6077a11fb210b29ba20bad2"
+        }
+    ]
+}

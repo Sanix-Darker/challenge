@@ -2,10 +2,10 @@
 
 /**
  *
- * @param {*} router 
+ * @param {*} router
  */
 const routes = (router) => {
-    const prefix = `${process.env.API_BASE}`;
+    const prefix = `/`;
 
     // The route for convertion
     router.get(`${prefix}`, (req, res) => {
