@@ -1,6 +1,11 @@
 # JoliMoi-Challenge SSE
 
-<img src="./app.png" />
+<img src="./app.gif" />
+
+## Requirements
+
+- npm
+- node
 
 ## How to install
 
@@ -12,10 +17,10 @@ yarn
 ## How to launch
 ```shell
 npm start
+```
 
 The app is going to be running on http://localhost:9091
 
-```
 ## How to test
 ```shell
 npm run test

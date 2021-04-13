@@ -63,17 +63,6 @@
       "mocha": true
     }
   },
-  "apidoc": {
-    "version": "1.0.0",
-    "defaultVersion": "1.0.0",
-    "name": "Dispo X API",
-    "title": "Dispo X API",
-    "url": "https://api.dispox.com/v1",
-    "header": {
-      "title": "Overview",
-      "filename": "public/api/apiheader.md"
-    }
-  },
   "babel": {
     "presets": [
       "env"

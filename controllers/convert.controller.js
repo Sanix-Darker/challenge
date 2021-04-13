@@ -14,12 +14,18 @@ controller.convertNumber = (req, res) => {
     });
 
     setInterval(function() {
-        const num = fs.readFileSync('./public/tmp', {
-            encoding:'utf8',
-            flag:'r'
-        });
+        try{
 
-        res.write("data: " + funcs._test.converter(num) + '\n\n');
+            const num = fs.readFileSync('./public/tmp', {
+                encoding:'utf8',
+                flag:'r'
+            });
+
+            res.write("data: " + funcs._test.converter(num) + '\n\n');
+        }catch(err){
+            res.write("data: " + "Too big" + "\n\n")
+        }
+
     }, 1000);
 };
 
